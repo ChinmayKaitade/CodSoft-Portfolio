@@ -1,0 +1,654 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Work+Sans:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --heading: rgb(0 10 45);
+  --para: #777;
+  --para-tint: #e4e4e4;
+  --white: #fff;
+  --black: #212529;
+  --helper: #8490ff;
+  --overlay: #3e64ff;
+  --helper-tint: #f3f4ff;
+  --bg: rgb(249 249 255);
+  --icons-bg: rgba(144, 172, 209, 0.2);
+  --gradient: linear-gradient(0deg, rgb(132 144 255) 0%, rgb(98 189 252) 100%);
+  --gradientSupport: -webkit-linear-gradient(
+    0deg,
+    rgb(132 144 255) 0%,
+    rgb(98 189 252) 100%
+  );
+  --shadow: 0px 0px 20px 0px rgb(132 144 255 / 20%);
+  --shadowSupport: 0px 20px 20px 0px rgb(132 144 255 / 30%);
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  color: var(--heading);
+  font-size: 6rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 5rem;
+  font-weight: 600;
+}
+
+p {
+  color: var(--para);
+  line-height: 1.6;
+  font-size: 1.7rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0rem;
+  background-color: rgb(243, 242, 242);
+}
+
+header .nav-logo {
+  margin: 10px 90px;
+  width: 320px;
+  height: 45px;
+}
+
+header .nav-logo:hover {
+  cursor: pointer;
+}
+
+.navbar-lists {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  padding: 0rem 3rem;
+}
+
+.navbar-link {
+  text-decoration: none;
+  font-size: 1.9rem;
+  color: rgb(40, 39, 39);
+  font-weight: 700;
+}
+
+.navbar-link:hover {
+  color: blue;
+}
+
+.hero-section {
+  margin: 7rem -7rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.name {
+  font-size: 4.5rem;
+  font-weight: 700;
+}
+
+.violet {
+  color: #6f17c2;
+}
+
+.orange {
+  color: orange;
+}
+
+#element {
+  font-family: "Poppins", sans-serif;
+  font-size: 37px;
+  font-weight: 700;
+}
+
+.my-hero-section-photo {
+  width: 350px;
+}
+
+.my-hero-section-photo {
+  height: 50rem;
+  width: 30rem;
+  box-shadow: 2rem -2rem 0rem #6f17c2;
+}
+
+.hire-me-btn {
+  background-color: #6f17c2;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  padding: 1.5rem 2rem;
+  font-size: 1.5rem;
+  margin: 2rem 0rem;
+  cursor: pointer;
+}
+
+.hire-me-btn a {
+  padding: 0.6rem 1rem;
+  color: white;
+}
+
+.hire-me-btn:hover {
+  /* transform: scale(1.09); */
+  transform: scale(1.05);
+  background-color: #6611b5;
+}
+
+.biodata-section {
+  display: flex;
+  flex-direction: row;
+  padding: 3rem;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 9rem;
+  background-color: rgb(240, 240, 240);
+}
+
+.my-biodata-photo {
+  height: 35rem;
+  box-shadow: -2rem -2rem 0rem #23a2e9;
+}
+
+.biodata-heading {
+  font-size: 4.5rem;
+  font-weight: 600;
+}
+
+.biodata-div {
+  max-width: 70rem;
+}
+
+.skills {
+  margin: 5rem 0rem;
+  font-size: 1.4rem;
+  position: relative;
+}
+
+.skills::after {
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  left: 0rem;
+  /* top: 1rem; */
+  width: 100%;
+  height: 0.4rem;
+  border-radius: 1rem;
+  background-color: rgba(198, 194, 194, 0.434);
+}
+
+.progress-bar {
+  position: absolute;
+  bottom: -1rem;
+  left: 0rem;
+  width: 90%;
+  height: 0.4rem;
+  border-radius: 1rem;
+  background-color: aqua;
+}
+
+.progress-bar-html {
+  width: 90%;
+}
+
+.progress-bar-css {
+  width: 87%;
+}
+
+.progress-bar-js {
+  width: 78%;
+}
+
+.progress-bar-python {
+  width: 85%;
+}
+
+.progress-bar-mern {
+  width: 90%;
+}
+
+.progress-bar > span {
+  position: absolute;
+  top: 1.4rem;
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  left: 97%;
+}
+
+.progress-bar > span::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 0.7rem solid aqua;
+  border-color: transparent;
+  border-bottom-color: aqua;
+  top: -1.4rem;
+}
+
+.latest-works-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  margin-top: 5rem;
+}
+
+.project-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 29rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-div img {
+  border-radius: 7px;
+}
+
+.previous-projects {
+  margin: 3rem 0rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.project-details {
+  transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+  transform: translateY(29rem);
+  opacity: 0;
+  position: absolute;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: rgba(80, 85, 78, 0.68);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.project-details p {
+  color: white;
+}
+
+.project-details h3 {
+  font-size: 3rem;
+}
+
+.project-div:hover .project-details {
+  transform: translateY(0rem);
+  opacity: 1;
+}
+
+.previous-projects img {
+  height: 22rem;
+}
+
+.see-website-btn {
+  margin: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background: linear-gradient(to right, rgb(33, 196, 196), rgb(46, 214, 186));
+}
+
+.see-website-btn a {
+  color: white;
+}
+
+.resume-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  width: 100%;
+  margin-top: 3rem;
+  padding: 8rem 0rem;
+  background-color: rgb(239, 236, 236);
+}
+
+.resume-section-photo {
+  height: 40rem;
+}
+
+.resume-details {
+  display: flex;
+  flex-direction: column;
+  width: 50rem;
+}
+
+.resume-details-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.resume-details-container h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 2rem 0rem 1.4rem 0rem;
+}
+
+.resume-main-data {
+  display: flex;
+  flex-direction: column;
+}
+
+.resume-main-data h4 {
+  font-size: 2rem;
+}
+
+.resume-main-data p {
+  font-size: 1.8rem;
+  line-height: 3rem;
+}
+
+.set-details-proper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.resume-secondary-data h5 {
+  font-size: 2rem;
+  font-weight: lighter;
+  color: rgb(8, 8, 234);
+  border-radius: 1rem;
+  padding: 0.4rem 0.7rem;
+  background-color: rgb(234, 233, 233);
+}
+
+.resume-secondary-data p {
+  font-size: 2rem;
+}
+
+.resume-secondary-data p {
+  color: black;
+}
+
+hr {
+  margin: 2rem 0rem;
+  border-color: rgba(128, 128, 128, 0.125);
+}
+
+.parallax-section {
+  background-image: url("https://getwallpapers.com/wallpaper/full/0/8/1/574978.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  position: relative;
+  background-attachment: fixed;
+  height: 40rem;
+}
+
+.parallax-div {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #3e64ff;
+  opacity: 0.7;
+}
+
+.parallax-container {
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.parallax-container h3 {
+  color: white;
+  text-shadow: 0.2rem 0.2rem 0rem black;
+}
+
+.hire-btn-parallax {
+  background: orange;
+}
+
+.contact-section {
+  padding: 3rem;
+}
+
+.contact-section h3 {
+  margin: 4rem 6rem;
+}
+
+.contact-form-div {
+  width: 60rem;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.input-area-div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-area {
+  border: 1px solid gray;
+  padding: 1rem;
+  margin: 1rem 0rem;
+  width: 100%;
+  font-size: 1.7rem;
+}
+
+.input-area-div:first-child {
+  margin: 1rem 1rem 1rem 0rem;
+}
+
+.email-input-area {
+  margin: 1rem 0rem 1rem 1rem;
+}
+
+.send-message-btn {
+  background: #6f17c2;
+}
+
+.footer-section {
+  margin-top: 30px;
+  width: 100%;
+  height: 30rem;
+  background-color: rgb(50, 49, 49);
+}
+
+.footer-manager {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: lighter;
+}
+
+.footer-manager h2 {
+  margin: 3rem 0rem;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.footer-services-list {
+  font-size: 1.4rem;
+  color: white;
+}
+
+.footer-services-list :hover {
+  color: #eca625;
+  cursor: pointer;
+}
+
+.footer-services-list li {
+  padding: 0.3rem 0rem;
+  margin: 1rem 0rem;
+  font-size: 1.7rem;
+}
+
+.sub-footer h4 {
+  text-align: center;
+  color: white;
+  font-size: 1.8rem;
+  margin: 2rem;
+  font-weight: lighter;
+}
+
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 50%;
+  }
+
+  header {
+    flex-direction: column;
+  }
+
+  .navbar-lists {
+    margin: 3rem 0rem 0rem 0rem;
+    gap: 2rem;
+  }
+
+  .hero-section-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .hero-section {
+    flex-direction: column;
+  }
+
+  .my-hero-section-photo {
+    height: 30rem;
+  }
+
+  .my-name {
+    font-size: 4rem;
+  }
+
+  .biodata-section {
+    flex-direction: column-reverse;
+  }
+
+  .my-biodata-photo {
+    height: 30rem;
+  }
+
+  .biodata-div {
+    width: 100%;
+  }
+  .biodata-heading {
+    text-align: center;
+  }
+  .download-resume-btn {
+    display: block;
+    margin: 3rem auto;
+  }
+
+  .biodata-div > p {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .latest-works-section p {
+    text-align: center;
+  }
+
+  .previous-projects {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .resume-section {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .my-biodata-photo .resume-section-photo {
+    margin-top: 30px;
+  }
+
+  .resume-details {
+    margin-bottom: 4rem;
+    width: 90%;
+  }
+
+  .resume-details h3 {
+    text-align: center;
+  }
+  .contact-form-div {
+    width: 90%;
+    align-items: center;
+  }
+  .contact-section h3 {
+    text-align: center;
+  }
+
+  .footer-manager {
+    height: 20%;
+    flex-direction: column;
+    padding: 3rem;
+  }
+}
